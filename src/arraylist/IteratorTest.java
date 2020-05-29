@@ -6,19 +6,15 @@ import java.util.List;
 
 public class IteratorTest {
     public static void main(String [] args){
-        List<String> list =new ArrayList<>();
-        list.add("123");
-        list.add("1234");
-        list.add("12345");
-        list.add("123456");
+        List<String> stringList =new ArrayList<String>();
+        List<Integer> integerList=new ArrayList<Integer>();
 
-        Iterator it=list.iterator();
-        while(it.hasNext()){
-            String str= (String) it.next();
-            if("123".equals(str)){
-                it.remove();
-            }
+        Class classStringList=stringList.getClass();
+        Class classIntegerList=integerList.getClass();
+
+        if (classIntegerList.equals(classStringList)){
+            System.out.println("类型相同");
         }
-        System.out.println(list);
+
     }
 }
