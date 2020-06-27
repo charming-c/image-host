@@ -7,13 +7,15 @@ import java.util.List;
 public class IteratorTest {
     public static void main(String [] args){
         List<String> stringList =new ArrayList<String>();
-        List<Integer> integerList=new ArrayList<Integer>();
+        stringList.add("r");
+        stringList.add("e");
+        stringList.add("f");
+        stringList.add("e");
+        stringList.add("r");
 
-        Class classStringList=stringList.getClass();
-        Class classIntegerList=integerList.getClass();
-
-        if (classIntegerList.equals(classStringList)){
-            System.out.println("类型相同");
+        Iterator iterator=stringList.iterator();
+        while(iterator.hasNext()){
+            System.out.print(iterator.next());
         }
 
     }
